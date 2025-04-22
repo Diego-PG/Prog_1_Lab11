@@ -74,7 +74,7 @@ while fake_var:
             for i, line1 in enumerate(lines):
                 if assignment == line1[:-1]:
                     assignment_code = lines[i + 1][:-1]
-                    for filepath in os.listdir("submissions"):
+                    for filepath in os.listdir("data/submissions"):
                         with open("submissions/" + filepath, "r") as file2:
                             for line2 in file2:
                                 if assignment_code in line2:
