@@ -55,7 +55,7 @@ elif select == "2":
                                     max_grade = grade
                                 if (grade < min_grade) or (min_grade == 0):
                                     min_grade = grade
-                print(f"Min: {min_grade}%\nAvg: {int(round(avg_grade/30, 0))}%\nMax: {max_grade}%")
+                print(f"Min: {min_grade}%\nAvg: {int((avg_grade/30)//1)}%\nMax: {max_grade}%")
                 break
         else:
             print("Assignment not found")
