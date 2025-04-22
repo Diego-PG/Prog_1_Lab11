@@ -12,15 +12,15 @@ while fake_var:
     if select == "1":
         final_grade = 0
         name = input("What is the student's name: ")
-        with open("students.txt", "r") as file1:
+        with open("data/students.txt", "r") as file1:
             for line1 in file1:
                 if name in line1:
-                    with open("assignments.txt", "r") as file2:
+                    with open("data/assignments.txt", "r") as file2:
                         for i, line2 in enumerate(file2, start=1):
                             if (i - 2) % 3 == 0:
                                 assignment_code = line2[:-1]
                             if i % 3 == 0:
-                                for filepath in os.listdir("submissions"):
+                                for filepath in os.listdir("data/submissions"):
                                     with open("submissions/" + filepath, "r") as file3:
                                         for line3 in file3:
                                             if assignment_code in line3:
@@ -42,12 +42,12 @@ while fake_var:
         max_grade = 0
         avg_grade = 0
         assignment = input("What is the assignment name: ")
-        with open("assignments.txt", "r") as file1:
+        with open("data/assignments.txt", "r") as file1:
             lines = list(file1)
             for i, line1 in enumerate(lines):
                 if assignment == line1[:-1]:
                     assignment_code = lines[i+1][:-1]
-                    for filepath in os.listdir("submissions"):
+                    for filepath in os.listdir("data/submissions"):
                         with open("submissions/" + filepath, "r") as file2:
                             for line2 in file2:
                                 if assignment_code in line2:
@@ -69,7 +69,7 @@ while fake_var:
     elif select == "3":
         grade_list = []
         assignment = input("What is the assignment name: ")
-        with open("assignments.txt", "r") as file1:
+        with open("data/assignments.txt", "r") as file1:
             lines = list(file1)
             for i, line1 in enumerate(lines):
                 if assignment == line1[:-1]:
