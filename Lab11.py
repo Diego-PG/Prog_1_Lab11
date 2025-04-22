@@ -21,7 +21,7 @@ while fake_var:
                                 assignment_code = line2[:-1]
                             if i % 3 == 0:
                                 for filepath in os.listdir("data/submissions"):
-                                    with open("submissions/" + filepath, "r") as file3:
+                                    with open("data/submissions/" + filepath, "r") as file3:
                                         for line3 in file3:
                                             if assignment_code in line3:
                                                 if line1[:3] in line3:
