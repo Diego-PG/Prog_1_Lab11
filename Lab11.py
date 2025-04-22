@@ -48,7 +48,7 @@ while fake_var:
                 if assignment == line1[:-1]:
                     assignment_code = lines[i+1][:-1]
                     for filepath in os.listdir("data/submissions"):
-                        with open("submissions/" + filepath, "r") as file2:
+                        with open("data/submissions/" + filepath, "r") as file2:
                             for line2 in file2:
                                 if assignment_code in line2:
                                     grade = int(line2[-2::1])
@@ -75,7 +75,7 @@ while fake_var:
                 if assignment == line1[:-1]:
                     assignment_code = lines[i + 1][:-1]
                     for filepath in os.listdir("data/submissions"):
-                        with open("submissions/" + filepath, "r") as file2:
+                        with open("data/submissions/" + filepath, "r") as file2:
                             for line2 in file2:
                                 if assignment_code in line2:
                                     grade = int(line2[-2::1])
